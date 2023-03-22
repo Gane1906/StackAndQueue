@@ -29,5 +29,19 @@ namespace StackAndQueue
             }
             Console.WriteLine();
         }
+
+        public void Peek()
+        {
+            if (this.top == null)
+                Console.WriteLine("Stack is empty");
+            Console.WriteLine("value at Peek is {0}", this.top.data);
+        }
+        public void Pop()
+        {
+            if (this.top == null)
+                Console.WriteLine("Stack is empty");
+            Console.WriteLine("value popped is {0} ", this.top.data);
+            this.top = this.top.next;
+        }
     }
 }
