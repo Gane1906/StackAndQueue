@@ -41,5 +41,21 @@ namespace StackAndQueue
             }
             Console.WriteLine();
         }
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty,We cant delete");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    Console.WriteLine("The value dequeued is {0}", this.head.data);
+                    this.head = this.head.next;
+                }
+            }
+        }
     }
 }
